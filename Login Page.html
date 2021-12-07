@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type ="text/css" href="Stle.css">
+		<script src="Login_Java.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+		<title>Login Page</title>
+	</head>
+
+	<body>
+		<header>
+			<button type="button" id="Back" onclick="window.location.href='Index.html'"><--Back</button>	
+		</header>
+		<main>
+			<h1>Login Information</h1>
+			<section class="LogInMenu">
+				<form onsubmit="return emDisplay()">
+					<section class="UserName">
+						<label for="Login_Username">Username:</label>
+						<input type="text" onfocus="return TextKeep('Login_Username')" onfocusout="return TextBack('Login_Username')" id="Login_Username" name="Login_Username" value="Example John Smith">
+					</section>
+					<br>
+					<section class="Password">
+						<label for="Login_Password">Password:</label>
+						<input type="text" onfocus="return TextKeep('Login_Password')" onfocusout="return TextBack('Login_Password')" id="Login_Password" name="Login_Password" value="Example 6fI012/@;">
+					</section>
+					<br>
+					<section class="Login_Submit">
+						<button type="button" id="Login_Submit_Button" onclick="return Login_Attempt()">Submit</button>
+					</section>
+				</form>
+			</section>
+		</main>		
+	</body>
+</html>
