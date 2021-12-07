@@ -1,0 +1,95 @@
+*
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body
+{
+background-color: rgba(130,130,130,1);
+}
+
+header 
+{
+background-color: rgba(255,255,255,1);
+height: 1.5vh;
+}
+
+header h6
+{
+font-family: 'Ubuntu', sans-serif;
+font-size: 1.5vh;
+}
+
+main
+{
+background-color: rgba(0,0,255,0.5);
+width: 25%;
+min-width:400px;
+height:98.5vh;
+margin-left: auto;
+margin-right: auto;
+}
+
+/*Login Box containing Username, Password and submit button*/
+
+main .LogInMenu
+{
+border: 5px solid black;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+
+height: 70vh;
+position: relative;
+top:10vh
+	
+}
+
+
+main h1
+{
+font-family: 'Ubuntu', sans-serif;
+text-align: center; 
+}
+
+main .UserName
+{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+main .Password
+{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+main #Login_Username,#Login_Password,#Login_Submit_Button
+{
+border: 1px solid black;
+border-radius: 5px;
+background-color: lightgrey;
+padding: 1px 5px;
+}
+
+main .Login_Submit
+{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+#Login_Submit_Button:hover
+{
+background-color: grey;
+color: white;
+}
+
+#Login_Submit_Button:active
+{
+transform: translateY(2px);
+}
