@@ -14,7 +14,8 @@ background-color: rgba(130,130,130,1);
 {
 position: relative;
 width: auto;
-left: 95%;
+left: 100%;
+background-color: light grey;
 }
 
 header 
