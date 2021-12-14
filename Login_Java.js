@@ -1,3 +1,4 @@
+var Checkbox = false;
 //brings the text back if no text is entered into the Username and Password area
 function TextBack(Name)
 {
@@ -25,3 +26,19 @@ if (Content == '' || Content == 'Example 6fI012/@;' || Content == 'Example John 
 	Output.value="";
 }
 }
+
+function Bool()
+{
+	Checkbox= !Checkbox;
+	var Inp = document.getElementById(Login_Password);
+	if (!Checkbox)
+	{
+		Login_Password.type = "password";
+ 
+	}
+	else
+	{
+		Login_Password.type = "text";
+	}
+}
+//Dynamically changes the type of the box containing the password from *s and text, it also allows the user to tick a check box to show the password  
