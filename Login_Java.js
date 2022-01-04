@@ -46,7 +46,7 @@ function TextKeepPW(Name)
     var Content = document.getElementById(Name).value;
     if (Content == '' || Content == 'Example 6fI012/@;')
     {
-        Output.value="";
+        Output.value="Example 6fI012/@;";
 	Login_Password.type = "text";
     }
     
