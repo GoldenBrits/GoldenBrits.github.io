@@ -27,11 +27,16 @@ function TextBackPW(Name)
     {
         var Output = document.getElementById(Name);
         var Content = document.getElementById(Name).value;
-        if (Content == '')
-            {		
-                    Output.value="Example 6fI012/@;";		
-            } 
-        } 
+	if (Content == '' || Content == 'Example 6fI012/@;')
+   	{
+        	Output.value="Example 6fI012/@;";
+		Login_Password.type = "text";
+    	}
+	else
+	{
+		Login_Password.type = "password";	
+	}
+     } 
 }
 
 
@@ -42,6 +47,7 @@ function TextKeepPW(Name)
     if (Content == '' || Content == 'Example 6fI012/@;')
     {
         Output.value="";
+	Login_Password.type = "text";
     }
     
     else if (!Checkbox)
