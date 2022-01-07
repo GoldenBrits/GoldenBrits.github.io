@@ -23,10 +23,10 @@
 					<section class="Password">
 						<label for="Login_Password">Password:</label>
 						<input type="text" onfocus="return TextKeepPW('Login_Password')" onfocusout="return TextBackPW('Login_Password')" id="Login_Password" name="Login_Password" value="Example 6fI012/@;">
-						<label>Please Include a: Special Character, Capital Letter and Number</label>
+						<label id="ErrorBox">Please Include a: Special Character, Capital Letter and Number</label>
 						<br>
 						<input type="checkbox" id="Checkbox_PW" value="Show" onclick="Checkbox = !Checkbox; TextKeepPW('Login_Password')">
-						<label for="Checkbox_PW">Show Password (Kinda Pog)</label>
+						<label id = "ShowPassword" for="Checkbox_PW">Show Password (Kinda Pog)</label>
 					</section>
 					<br>
 					<section class="Login_Submit">
