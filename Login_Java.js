@@ -29,7 +29,7 @@ function TextBackPW(Name)
         var Content = document.getElementById(Name).value;
 	if (Content == '' || Content == 'Example 6fI012/@;')
    	{
-        	Output.value="Example 6fI012/@;";
+        	Output.value="";
 		Login_Password.type = "text";
     	}
 	else
