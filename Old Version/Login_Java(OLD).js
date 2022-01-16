@@ -40,4 +40,3 @@ function Bool()
 		Login_Password.type = "text";
 	}
 }
-//Dynamically changes the type of the box containing the password from *s and text, it also allows the user to tick a check box to show the password  

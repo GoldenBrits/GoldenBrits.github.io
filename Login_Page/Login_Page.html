@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type ="text/css" href="Login_Page.css">
+		<script src="Login_Page.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+		<title>Login Page</title>
+	</head>
+
+	<body>
+		<header>
+			<button type="button" id="Login_BMP" onclick="window.location.href='../index.html'">To Main Page</button>
+		</header>
+		<main>
+			<h1>Login Information</h1>
+			<section class="LogInMenu">
+				<form>
+					<section class="UserName">
+						<label for="Login_Username">Username:</label>
+						<input type="text" onfocus="return TextKeepUN('Login_Username')" onfocusout="return TextBackUN('Login_Username')" id="Login_Username" name="Login_Username" value="Example John Smith">
+					</section>
+					<br>
+					<section class="Password">
+						<label for="Login_Password">Password:</label>
+						<input type="text" onfocus="return TextKeepPW('Login_Password')" onfocusout="return TextBackPW('Login_Password')" id="Login_Password" name="Login_Password" value="Example 6fI012/@;">
+						<input type="checkbox" id="Checkbox_PW" value="Show" onclick="Checkbox = !Checkbox; TextKeepPW('Login_Password')">
+					</section>
+					<br>
+					<section class="Login_Submit">
+						<button type="button" id="Login_Submit_Button" onclick="return Login_Attempt()">Submit</button>
+					</section>
+				</form>
+			</section>
+		</main>		
+	</body>
+</html>
