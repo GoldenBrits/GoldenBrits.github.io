@@ -1,5 +1,13 @@
 var Checkbox = false;
 
+var ErrorG = false;
+var ErrorC = false;
+var ErrorL = false;
+var ErrorN = false;
+var ErrorS = false;
+var ErrorU = false;
+var ErrorP = false;
+
 
 function TextBackUN(Name)
 {
@@ -60,13 +68,11 @@ function TextKeepPW(Name)
     }
 }
 
+
 function Login_Attempt()
 {
 	var ContentUN = document.getElementById('Login_Username').value;
 	var ContentPW = document.getElementById('Login_Password').value;
-
-	var ErrorU = false;
-	var ErrorP = false;
 
 	if (ContentUN == "Example John Smith" || ContentUN == "")
 	{
@@ -86,40 +92,47 @@ function Login_Attempt()
 		var Cap = ContentPW.match(/[A-Z]/);
 		var Lower = ContentPW.match(/[a-z]/);
 		var Num = ContentPW.match(/[\d]/);
-		()-_+
+		var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);
 
-		var Spec = ContentPW.search(Pog);//Must Find a fix to Urgently[][][][][][][]][][][][][][][][][][][][][][][][]
-
-		var Error = false;
-		var ErrorC = false;
-		var ErrorL = false;
-		var ErrorN = false;
-		var ErrorS = false;
 		if (Cap == null)
 		{			
-			Error = true;
+			ErrorG = true;
 			ErrorC = true;
 		}
 		else if (Lower == null)
 		{
 			
-			Error = true;
+			ErrorG = true;
 			ErrorL = true;
 		}
 		else if (Num == null)
 		{
-			Error = true;
+			ErrorG = true;
 			ErrorN = true;
 		}
 		else if (Spec == null)
 		{
-			Error = true;
+			ErrorG = true;
 			ErrorS = true;
 		}
-		console.log(Error, ErrorS, ErrorN, ErrorL, ErrorC,);
+
+		console.log(ErrorG, ErrorS, ErrorN, ErrorL, ErrorC);
 	}
 	else
 	{
-		//Don't put the default Values in Error message witha  check to see which one if not both is the issue
+		if (ErrorU == true && ErrorP == true)
+		{
+			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error with Password<br>Error found Default value or Empty";
+		}
+
+		else if (ErrorP == true)
+		{
+			document.getElementById('Password_Info').innerHTML = "Error with Password<br>Error found Default value or Empty"
+		}
+
+		else
+		{
+			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error found Default value or Empty"
+		}
 	}
 }
