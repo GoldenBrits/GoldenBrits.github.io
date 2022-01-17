@@ -62,8 +62,8 @@ function TextKeepPW(Name)
 
 function Login_Attempt()
 {
-	var ContentUN = document.getElementById('Login_Username');
-	var ContentPW = document.getElementById('Login_Password');
+	var ContentUN = document.getElementById('Login_Username').value;
+	var ContentPW = document.getElementById('Login_Password').value;
 
 	var ErrorU = false;
 	var ErrorP = false;
@@ -83,9 +83,10 @@ function Login_Attempt()
 	
 	if (ErrorU == false && ErrorP == false)
 	{
-		var Cap = ContentPW.search(/A-Z/);
-		var Lower = ContentPW.search(/a-z/);
-		var Num = ContentPW.search(/\d/);
+		var Cap = ContentPW.match(/[A-Z]/);
+		var Lower = ContentPW.match(/[a-z]/);
+		var Num = ContentPW.match(/[\d]/);
+		()-_+
 
 		var Spec = ContentPW.search(Pog);//Must Find a fix to Urgently[][][][][][][]][][][][][][][][][][][][][][][][]
 
@@ -94,23 +95,23 @@ function Login_Attempt()
 		var ErrorL = false;
 		var ErrorN = false;
 		var ErrorS = false;
-		if (Cap = -1)
+		if (Cap == null)
 		{			
 			Error = true;
 			ErrorC = true;
 		}
-		else if (Lower = -1)
+		else if (Lower == null)
 		{
 			
 			Error = true;
 			ErrorL = true;
 		}
-		else if (Num = -1)
+		else if (Num == null)
 		{
 			Error = true;
 			ErrorN = true;
 		}
-		else if (Spec = -1)
+		else if (Spec == null)
 		{
 			Error = true;
 			ErrorS = true;
