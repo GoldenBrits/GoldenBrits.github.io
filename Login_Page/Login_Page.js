@@ -73,6 +73,14 @@ function Login_Attempt()
 {
 	var ContentUN = document.getElementById('Login_Username').value;
 	var ContentPW = document.getElementById('Login_Password').value;
+	
+	ErrorG = false;
+	ErrorC = false;
+	ErrorL = false;
+	ErrorN = false;
+	ErrorS = false;
+	ErrorU = false;
+	ErrorP = false;
 
 	if (ContentUN == "Example John Smith" || ContentUN == "")
 	{
@@ -93,11 +101,14 @@ function Login_Attempt()
 		var Lower = ContentPW.match(/[a-z]/);
 		var Num = ContentPW.match(/[\d]/);
 		var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);
+		
+		var ErrorString = "";
 
 		if (Cap == null)
 		{			
 			ErrorG = true;
 			ErrorC = true;
+			ErrorString += "No Capital in Password<br>"; 
 		}
 		else if (Lower == null)
 		{
@@ -117,6 +128,15 @@ function Login_Attempt()
 		}
 
 		console.log(ErrorG, ErrorS, ErrorN, ErrorL, ErrorC);
+		
+		if (Error)
+		{
+			
+		}
+		else 
+		{
+			//no error stuff
+		}
 	}
 	else
 	{
