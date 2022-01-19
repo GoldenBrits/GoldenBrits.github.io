@@ -1,10 +1,6 @@
 var Checkbox = false;
 
 var ErrorG = false;
-var ErrorC = false;
-var ErrorL = false;
-var ErrorN = false;
-var ErrorS = false;
 var ErrorU = false;
 var ErrorP = false;
 
@@ -75,10 +71,6 @@ function Login_Attempt()
 	var ContentPW = document.getElementById('Login_Password').value;
 	
 	ErrorG = false;
-	ErrorC = false;
-	ErrorL = false;
-	ErrorN = false;
-	ErrorS = false;
 	ErrorU = false;
 	ErrorP = false;
 
@@ -87,13 +79,10 @@ function Login_Attempt()
 		ErrorU = true;
 	}
 
-
 	if (ContentPW == "Example 6fI012/@;" || ContentPW == "")
 	{
 		ErrorP = true;
 	}
-
-	console.log(ErrorP, ErrorU);
 	
 	if (ErrorU == false && ErrorP == false)
 	{
@@ -102,40 +91,41 @@ function Login_Attempt()
 		var Num = ContentPW.match(/[\d]/);
 		var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);
 		
-		var ErrorString = "";
+		var ErrorString = "Error(s) found:<br>";
 
 		if (Cap == null)
 		{			
 			ErrorG = true;
-			ErrorC = true;
-			ErrorString += "No Capital in Password<br>"; 
-		}
-		else if (Lower == null)
-		{
-			
-			ErrorG = true;
-			ErrorL = true;
-		}
-		else if (Num == null)
-		{
-			ErrorG = true;
-			ErrorN = true;
-		}
-		else if (Spec == null)
-		{
-			ErrorG = true;
-			ErrorS = true;
+			ErrorString += "No Capital Letter<br>"; 
 		}
 
-		console.log(ErrorG, ErrorS, ErrorN, ErrorL, ErrorC);
-		
-		if (Error)
+		if (Lower == null)
+		{			
+			ErrorG = true;
+			ErrorString += "No Lower Case Letter<br>";
+		}
+
+		if (Num == null)
 		{
-			
+			ErrorG = true;
+			ErrorString += "No Number<br>";
+		}
+
+		if (Spec == null)
+		{
+			ErrorG = true;
+			ErrorString += "No Special Character"
+		}
+
+		console.log(ErrorG);
+		
+		if (ErrorG == true)
+		{
+			document.getElementById('Password_Info').innerHTML = ErrorString;
 		}
 		else 
 		{
-			//no error stuff
+			//check database and stuff
 		}
 	}
 	else

@@ -1,48 +1,61 @@
 *
 {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
 body
 {
-background-image: url('MainPage_Background.gif');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position:center;
-background-color: rgb(40, 60, 99);
+    background-image: url('MainPage_Background.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    background-color: rgb(40, 60, 99);
 }
 
-header
+#MainMenu_BLP
 {
-border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgrey;
+    padding: 1px 5px;
 }
 
-header img, button
+
+#MainMenu_BLP:hover
 {
-display: inline-block;
+    background-color: grey;
+    color: white;
 }
 
-header #MainMenu_BLI
+
+#MainMenu_BLP
 {
-position: fixed;
-width: 5%;
-right: 5%;
+    position: absolute;
+    width: 5%;
+    right: 2.5%;
 }
 
-header #Logo_Right
+
+#Logo_Right, #Logo_Left
 {
-position: absolute;
-width: 5%;
-right: 0px;
+    position: absolute;
+    width: 2.5%;
+    height: 4%;
+    min-width: 30px;
+    min-height: 30px;
 }
 
-header #Logo_Left
+
+#Logo_Right
 {
-position: absolute;
-width: 5%;
-left:0px;
+    right: 0px;
 }
 
 
-                                                                                                                              
+#Logo_Left
+{
+    left: 0px;
+}                                                                                                                             

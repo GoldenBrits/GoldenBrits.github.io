@@ -15,16 +15,17 @@ body
 
 header 
 {
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(0,0,255,0.5);
+    border: 3px Black solid;
 }
 
 
 header #Login_BMP
 {
     position: relative;
-    width: auto;
-    left: 94.6%;
-    background-color: light grey;
+    width: 8%;
+    left: 0%;
+    background-color: lightgrey;
 }
 
 
@@ -81,7 +82,7 @@ main .Password
 }
 
 
-main #Login_Username,#Login_Password,#Login_Submit_Button,#Password_Info
+main #Login_Username,#Login_Password,#Login_Submit_Button,#Password_Info,#Login_BMP
 {
     border: 1px solid black;
     border-radius: 5px;
@@ -102,7 +103,7 @@ main .Login_Submit
 }
 
 
-#Login_Submit_Button:hover
+#Login_Submit_Button:hover, #Login_BMP:hover
 {
     background-color: grey;
     color: white;
