@@ -15,12 +15,21 @@ body
     background-color: rgb(40, 60, 99);
 }
 
+#Logo_Left_Head, #Logo_Right_Head
+{
+    width: 2.5%;
+    height: 4%;
+    min-width: 40px;
+    min-height: 25px;
+}
+
 #MainMenu_BLP
 {
     border: 1px solid black;
     border-radius: 5px;
     background-color: lightgrey;
     padding: 1px 5px;
+    min-width:100px;
 }
 
 
@@ -33,29 +42,7 @@ body
 
 #MainMenu_BLP
 {
-    position: absolute;
     width: 5%;
     right: 2.5%;
 }
-
-
-#Logo_Right, #Logo_Left
-{
-    position: absolute;
-    width: 2.5%;
-    height: 4%;
-    min-width: 30px;
-    min-height: 30px;
-}
-
-
-#Logo_Right
-{
-    right: 0px;
-}
-
-
-#Logo_Left
-{
-    left: 0px;
-}                                                                                                                             
+                                                                                                                          
