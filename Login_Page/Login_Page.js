@@ -114,7 +114,7 @@ function Login_Attempt()
 		if (Spec == null)
 		{
 			ErrorG = true;
-			ErrorString += "No Special Character"
+			ErrorString += "No Special Character";
 		}
 
 		console.log(ErrorG);
@@ -137,12 +137,12 @@ function Login_Attempt()
 
 		else if (ErrorP == true)
 		{
-			document.getElementById('Password_Info').innerHTML = "Error with Password<br>Error found Default value or Empty"
+			document.getElementById('Password_Info').innerHTML = "Error with Password<br>Error found Default value or Empty";
 		}
 
 		else
 		{
-			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error found Default value or Empty"
+			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error found Default value or Empty";
 		}
 	}
 }
