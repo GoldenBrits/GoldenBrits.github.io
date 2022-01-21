@@ -8,12 +8,21 @@
 
 body
 {
-    background-image: url('MainPage_Background.gif');
-    background-repeat: no-repeat;
+    background-image: url('../Login_Page/LoginPage_Background.gif');
     background-attachment: fixed;
     background-position:center;
     background-color: rgb(40, 60, 99);
 }
+
+
+header
+{
+    position: sticky;
+    top: 0px;
+    border-bottom: 5px solid black;
+    background-color: rgba(0,0,255,0.5);
+}
+
 
 #Logo_Left_Head, #Logo_Right_Head
 {
