@@ -15,6 +15,15 @@ body
 }
 
 
+main
+{
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px hotpink solid;
+    width: 50%;  
+}
+
+
 header
 {
     position: sticky;
