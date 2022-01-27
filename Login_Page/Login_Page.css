@@ -13,14 +13,25 @@ body
 }
 
 
-header 
+header
 {
-    background-color: rgba(0,0,255,0.5);
-    border: 3px Black solid;
+    top: 0px;
+    border-bottom: 5px solid black;
+    background-color: lightgrey;
 }
 
 
-header #Login_BMP
+#Logo_Left_Head, #Logo_Right_Head
+{
+    width: 2.5%;
+    height: 4%;
+    min-width: 40px;
+    min-height: 25px;
+}
+
+
+
+#Login_BMP
 {
     position: relative;
     width: 8%;
