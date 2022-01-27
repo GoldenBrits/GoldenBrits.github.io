@@ -21,6 +21,12 @@ header
 }
 
 
+#Logo_Left_Head, #Logo_Right_Head, #Title_Head, #Login_BMP
+{
+    display: inline-block;
+}
+
+
 #Logo_Left_Head, #Logo_Right_Head
 {
     width: 2.5%;
