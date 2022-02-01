@@ -119,6 +119,15 @@ main .Login_Submit
 }
 
 
+#Logo_Left, #Logo_Right
+{
+    width: 2.5%;
+    height: 4%;
+    min-width: 40px;
+    min-height: 25px;
+}
+
+
 #Login_Submit_Button:hover, #Login_BMP:hover
 {
     background-color: grey;
