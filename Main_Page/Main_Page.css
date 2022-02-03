@@ -37,7 +37,7 @@ header
 }
 
 
-#Logo_Left_Head, #Logo_Right_Head, #Title_Head, #MainMenu_BLP
+#Logo_Left_Head, #Logo_Right_Head, #Title_Head, #MainMenu_BLP, #MainMenu_BAM
 {
     display: inline-block;
 }
@@ -51,26 +51,19 @@ header
     min-height: 25px;
 }
 
-#MainMenu_BLP
+#MainMenu_BLP, MainMenu_BAM
 {
     border: 1px solid black;
     border-radius: 5px;
     background-color: lightgrey;
     padding: 1px 5px;
     min-width:100px;
+    width: 5%;
 }
 
 
-#MainMenu_BLP:hover
+#MainMenu_BLP:hover, #MainManu_BAM:hover
 {
     background-color: grey;
     color: white;
-}
-
-
-#MainMenu_BLP
-{
-    width: 5%;
-    right: 2.5%;
-}
-                                                                                                                          
+}                                                                                                                         
