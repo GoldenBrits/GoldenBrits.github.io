@@ -1,3 +1,15 @@
+windows.addEventListner('resize', function(event)
+{
+  var Canvas = document.getElementByID("Canvas");
+  var Body = document.getElementById("Body");
+  var Width = Canvas.clientwidth;
+  var Height = Canvas.clientheight; 
+  Body.setAttribute('width', Width)
+  Body.setAttribute('height', Height)
+}
+);
+
+
 var MainPage = '
 Mathematics is vital in our modern life, it surrounds us everywhere and is the key subject that opens many doors.  As our world becomes more and more technology based so the need for mathematical skills becomes more and more important.<br><br>
 You may be a student struggling with exams and day to day maths lessons, or an adult trying to cope with numeracy in the workplace, I am here to assist and help.<br><br>
@@ -7,7 +19,7 @@ var AboutMe = 'I am a private maths tutor providing one-to-one tuition and suppo
 I’ve been teaching and mentoring Maths for over 15 years. I started tutoring for fun but, as I had such good results with my initial pupils it attracted so many more.  This inspired me to do the job professionally.  I cover all essential topics at Key Stage 2, Key Stage 3 and Key Stage 4 including preparing pupils for 11+, 13+ and GCSE exams. I also teach adult learners, who may be struggling with a maths exam on a higher education course, wishing to retake a maths GCSE or grappling with numerical reasoning in the workplace or for a job interview.<br><br>
 I love showing the fun side of maths and demonstrating that a problem isn’t just a set of terrifying numbers but an enjoyable challenge!  Working one-to-one, I concentrate on specific areas to build pupils’ self-confidence and understanding to improve results. Initially I assess each individual’s level and need and encourage them to understand the basics and use their own common sense to simplify more complex problems.  I enjoy teaching all standards; fine tuning to achieve an A* or helping a pupil who is really struggling with everything.<br><br>
 I can provide one-off lessons or regular weekly slots.  Regular students will benefit from tailormade study plans, homework, ongoing mini tests and exam preparation as part of the learning package.<br><br>
-​I am a member of The Tutor's Association and have a DBS Certificate'; 
+​I am a member of The Tutor's Association and have a DBS Certificate';
 
 function Content(Requested)
 {
@@ -30,3 +42,20 @@ switch(Requested)
   
 }
 }
+
+
+function Background
+{
+  var Canvas = document.getElementById("Canvas");
+  var Brush = Canvas.getContext("2d");
+  var Body = document.getElementById("Body");
+  var Width = Canvas.clientwidth;
+  
+  var Gradient = Brush.createLinearGradient(0, 0, Width, 0);
+  Gradient.addColourStop(0, rgb());
+  Gradient.addColourStop(1, rbg());
+  
+}
+
+
+
