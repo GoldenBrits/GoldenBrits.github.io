@@ -6,15 +6,6 @@
 }
 
 
-body
-{
-    background-image: url('../Login_Page/LoginPage_Background.gif');
-    background-attachment: fixed;
-    background-position:center;
-    background-color: rgb(40, 60, 99);
-}
-
-
 main
 {
     margin-left: auto;
