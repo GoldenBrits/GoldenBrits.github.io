@@ -101,7 +101,33 @@ function draw() {
     ctx.clearRect(0, 0, clearX, clearY); // clear the canvas
   
     //Set the colour chang up here[][][][][][][][][][][][][][[][][][[][][][][][][[][][][][][][][][][][][][[][][][][][][][][][][][][[][[][][]
-    var = new date;
+    var Time = new Date;
+    var Minutes = Time.getMinutes();
+    var Hours = Time.getHours();
+    var Date = Time.getDate();
+    var Month = Time.getMonth();
+  
+    var Width = Canvas.clientwidth;
+    var Height = Canvas.clientheight; 
+  
+    //specific dates such as christmas easter egg
+  
+    if (Month == 5 && Date == 4)
+    {
+      conosle.log('Happy Star wars day');
+    }
+  
+    if (Month == 12 && Date == 25)
+    {
+      Console.log('Happy Christmas')
+    }
+    
+    //Hours calculating the Hue of the image
+    
+    var Hue = ((Hours + Minutes)/61)*360;
+  
+    ctx.rect(0,0, Width, Height)
+    ctx.fillstyle = rbga(0,0,0,0.3);
 
     // if image is <= Canvas Size
     if (imgW <= CanvasXSize) {
