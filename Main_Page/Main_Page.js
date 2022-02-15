@@ -120,7 +120,7 @@ function draw() {
     var Hue = ((Hours + Minutes)/61)*360;
   
     ctx.rect(0,0, Width, Height);
-    ctx.fillstyle = hsla(Hue,100%,50%,0.3);
+    ctx.fillstyle = 'hsla(Hue, 100%, 50%, 0.3)';
 
     // if image is <= Canvas Size
     if (imgW <= CanvasXSize) {
