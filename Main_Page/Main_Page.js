@@ -51,7 +51,7 @@ var img = new Image();
 
 
   
-img.src = '../Assets/MainPage_Backgorund.png';
+img.src = '../MainPage_Backgorund.png';
 var CanvasXSize = get.ElementById('Canvas').clientwidth;
 var CanvasYSize = get.ElementById('Canvas').clientheight;
 var speed = 30; // lower is faster
@@ -126,8 +126,8 @@ function draw() {
     
     var Hue = ((Hours + Minutes)/61)*360;
   
-    ctx.rect(0,0, Width, Height)
-    ctx.fillstyle = rbga(0,0,0,0.3);
+    ctx.rect(0,0, Width, Height);
+    ctx.fillstyle = hsla(Hue,100%,50%,0.3);
 
     // if image is <= Canvas Size
     if (imgW <= CanvasXSize) {
