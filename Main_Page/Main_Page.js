@@ -45,8 +45,8 @@ var img = new Image();
 
   
 img.src = '../MainPage_Background.png';
-var CanvasXSize = document.ElementById('Canvas').clientwidth;
-var CanvasYSize = document.ElementById('Canvas').clientheight;
+var CanvasXSize = document.getElementById('Canvas').clientwidth;
+var CanvasYSize = document.getElementById('Canvas').clientheight;
 var speed = 30; // lower is faster
 var scale = 1.05;
 
