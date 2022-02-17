@@ -44,7 +44,7 @@ var img = new Image();
 
 
   
-img.src = '../MainPage_Backgorund.png';
+img.src = '../MainPage_Background.png';
 var CanvasXSize = get.ElementById('Canvas').clientwidth;
 var CanvasYSize = get.ElementById('Canvas').clientheight;
 var speed = 30; // lower is faster
