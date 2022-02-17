@@ -1,4 +1,4 @@
-windows.addEventListner('resize', function(event)
+window.addEventListner('resize', function(event)
 {
   var Canvas = document.getElementByID("Canvas");
   var Body = document.getElementById("Body");
