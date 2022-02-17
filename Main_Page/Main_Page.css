@@ -43,7 +43,7 @@ header
     min-height: 25px;
 }
 
-#MainMenu_BLP, MainMenu_BAM
+#MainMenu_BLP, #MainMenu_BAM
 {
     border: 1px solid black;
     border-radius: 5px;
