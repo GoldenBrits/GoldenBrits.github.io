@@ -1,6 +1,6 @@
 window.addEventListener('resize', function(event)
 {
-  var Canvas = document.getElementByID("Canvas");
+  var Canvas = document.getElementById("Canvas");
   var Body = document.getElementById("Body");
   var Width = Canvas.clientwidth;
   var Height = Canvas.clientheight; 
@@ -45,11 +45,10 @@ var img = new Image();
 
   
 img.src = '../MainPage_Background.png';
-var CanvasXSize = get.ElementById('Canvas').clientwidth;
-var CanvasYSize = get.ElementById('Canvas').clientheight;
+var CanvasXSize = document.ElementById('Canvas').clientwidth;
+var CanvasYSize = document.ElementById('Canvas').clientheight;
 var speed = 30; // lower is faster
 var scale = 1.05;
-var y = -4.5; // vertical offset
 
 // Main program
 
@@ -130,11 +129,11 @@ function draw() {
         }
         // draw additional image1
         if (x > 0) {
-            ctx.drawImage(img, -imgW + x, y, imgW, imgH);
+            ctx.drawImage(img, -imgW + x, imgW, imgH);
         }
         // draw additional image2
         if (x - imgW > 0) {
-            ctx.drawImage(img, -imgW * 2 + x, y, imgW, imgH);
+            ctx.drawImage(img, -imgW * 2 + x, imgW, imgH);
         }
     }
 
@@ -146,11 +145,11 @@ function draw() {
         }
         // draw additional image
         if (x > (CanvasXSize-imgW)) {
-            ctx.drawImage(img, x - imgW + 1, y, imgW, imgH);
+            ctx.drawImage(img, x - imgW + 1, imgW, imgH);
         }
     }
     // draw image
-    ctx.drawImage(img, x, y,imgW, imgH);
+    ctx.drawImage(img, x, imgW, imgH);
     // amount to move
     x += dx;
 }
