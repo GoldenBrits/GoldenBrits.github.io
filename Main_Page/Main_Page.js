@@ -1,11 +1,11 @@
-window.addEventListner('resize', function(event)
+window.addEventListener('resize', function(event)
 {
   var Canvas = document.getElementByID("Canvas");
   var Body = document.getElementById("Body");
   var Width = Canvas.clientwidth;
   var Height = Canvas.clientheight; 
-  Body.setAttribute('width', Width)
-  Body.setAttribute('height', Height)
+  Body.setAttribute('width', Width);
+  Body.setAttribute('height', Height);
 }
 );
 
