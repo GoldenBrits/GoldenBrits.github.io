@@ -54,7 +54,7 @@ header
 }
 
 
-#MainMenu_BLP:hover, #MainManu_BAM:hover
+#MainMenu_BLP:hover, #MainMenu_BAM:hover
 {
     background-color: grey;
     color: white;
