@@ -29,7 +29,7 @@ header
 }
 
 
-#Logo_Left_Head, #Logo_Right_Head, #Title_Head, #Buttons
+#Logo_Left_Head, #Logo_Right_Head, #Title_Head, .Buttons
 {
     display: inline-block;
 }
@@ -43,7 +43,7 @@ header
     min-height: 25px;
 }
 
-#Buttons
+.Buttons
 {
     border: 1px solid black;
     border-radius: 5px;
@@ -54,7 +54,7 @@ header
 }
 
 
-#Buttons:hover
+.Buttons:hover
 {
     background-color: grey;
     color: white;
