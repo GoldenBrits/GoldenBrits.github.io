@@ -11,18 +11,26 @@
 		<header>									
 			<img id="Logo_Left_Head" src="Main_Page/Logo.png" alt="Logo"></img>
 			<h1 id="Title_Head">Penny Chivers Maths Tutor</h1>
-			<button type="button" id="MainMenu_BLP" onclick="window.location.href='Login_Page/Login_Page.html'">To Login</button>
-			<button type="button" id="MainMenu_BAM" onclick="Content('AboutMe')">About Me</button>
+			<section id="Buttons">
+				<button type="button" id="MainMenu_BLP" onclick="window.location.href='Login_Page/Login_Page.html'">To Login</button>
+				<button type="button" id="MainMenu_BSU" onclick="window.location.href='SignUp_Page/SignUp_Page.html'">To Sign Up</button>
+				<button type="button" id="MainMenu_BMM" onclick="Content('MainPage')">Main Menu</button>
+				<button type="button" id="MainMenu_BAM" onclick="Content('AboutMe')">About Me</button>
+				<button type="button" id="MainMenu_BCP" onclick="Content('Charges')">Charges</button>
+				<button type="button" id="MainMenu_BCT" onclick="Content('Contact')">Contact</button>
+				<button type="button" id="MainMenu_BWT" onclick="Content('Why')">Why Tutoring</button>
+				<button type="button" id="MainMenu_BTP" onclick="Content('Testimonal')">Testimonials</button>
+				<button type="button" id="MainMenu_BHE" onclick="Content('HomeEd')">Home Ed Courses</button>
+				<button type="button" id="MainMenu_BOT" onclick="Content('Tutor')">Other Tutors</button>
+			</section>
 			<img id="Logo_Right_Head" src="Main_Page/Logo.png" alt="Logo"></img>		
 		</header>
 
 		<canvas id="Canvas"></canvas>
 
-		<main>
-			<h1 id="Title_Main">Home</h1>
-			<p id ="DisplayText">Mathematics is vital in our modern life, it surrounds us everywhere and is the key subject that opens many doors.  As our world becomes more and more technology based so the need for mathematical skills becomes more and more important.<br><br>
-			You may be a student struggling with exams and day to day maths lessons, or an adult trying to cope with numeracy in the workplace, I am here to assist and help.<br><br>
-			I am an enthusiastic and experienced maths tutor, tutoring all age groups from primary school up to GCSE standard.  With clear and concise explanations I aim to make maths more understandable and enjoyable.</p>
+		<main onload="Content">
+			<h1 id="Title_Main"></h1>
+			<p id ="DisplayText"></p>
 		</main>
 	</body>	
 </html>
