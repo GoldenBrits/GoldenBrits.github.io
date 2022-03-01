@@ -61,7 +61,7 @@ header
 }                                                                                                                         
 
 
-.dropbtn {
+.Drop {
   background-color: #04AA6D;
   color: white;
   padding: 16px;
@@ -70,13 +70,13 @@ header
 }
 
 
-.dropdown {
+.DropDown {
   position: relative;
   display: inline-block;
 }
 
 
-.dropdown-content {
+.DropDown_Content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
