@@ -82,7 +82,7 @@ img.onload = function() {
     }
 
     // get canvas context
-    ctx = document.getElementById('canvas').getContext('2d');
+    ctx = document.getElementById('Canvas').getContext('2d');
 
     // set refresh rate
     return setInterval(draw, speed);
