@@ -2,40 +2,50 @@
 <html lang="en">
 	<head>
 		<title>Main Page</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="Main_Page/Logo.png"> 
+		<link rel="icon" type="image/png" sizes="32x32" href="Assets/Logo.png"> 
 		<link rel="stylesheet" type="text/css" href="Main_Page/Main_Page.css">
 		<script src="Main_Page/Main_Page.js"></script>
 	</head>
 	
-	<body id="Body" onload="Background()">
+	<body id="Body" onload="OnLoad()">
 		<header>									
-			<img id="Logo_Left_Head" src="Main_Page/Logo.png" alt="Logo"></img>
+			<img id="Logo_Left_Head" src="Assets/Logo.png" alt="Logo"></img>
 			<h1 id="Title_Head">Penny Chivers Maths Tutor</h1>
-			<section>
+			<section id="DropDownButtons">
 				<button class="Buttons" type="button" id="MainMenu_BLP" onclick="window.location.href='Login_Page/Login_Page.html'">To Login</button>
 				<button class="Buttons" type="button" id="MainMenu_BSU" onclick="window.location.href='SignUp_Page/SignUp_Page.html'">To Sign Up</button>
 				<button class="Buttons" type="button" id="MainMenu_BMM" onclick="Content('MainPage')">Main Menu</button>
-				<section class="DropDown">
-					<button class="Drop">Dropdown</button>
-					<section class="DropDown_Content">
-						<button class="Buttons Inside" type="button" id="MainMenu_BAM" onclick="Content('AboutMe')">About Me</button>
-						<button class="Buttons Inside" type="button" id="MainMenu_BCP" onclick="Content('Charges')">Charges</button>
-						<button class="Buttons Inside" type="button" id="MainMenu_BCT" onclick="Content('Contact')">Contact</button>
-						<button class="Buttons Inside" type="button" id="MainMenu_BWT" onclick="Content('Why')">Why Tutoring</button>
-						<button class="Buttons Inside" type="button" id="MainMenu_BTP" onclick="Content('Testimonal')">Testimonials</button>
-						<button class="Buttons Inside" type="button" id="MainMenu_BHE" onclick="Content('HomeEd')">Home Ed Courses</button>
-						<button class="Buttons Inside" type="button" id="MainMenu_BOT" onclick="Content('Tutor')">Other Tutors</button>	
-					</section>
-				</section>
+				<div class="dropdown">
+					<button class="dropbtn">Others <img id="Arrow" src="Assets/ArrowDown.png" alt="ArrowDown"></button>
+					<div class="dropdown-content">
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BOT" onclick="Content('Tutor')">Other Tutors</button></a>
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BHE" onclick="Content('HomeEd')">Home Ed Courses</button></a>
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BTP" onclick="Content('Testimonal')">Testimonials</button></a>
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BWT" onclick="Content('Why')">Why Tutoring</button></a>
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BCT" onclick="Content('Contact')">Contact</button></a>
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BCP" onclick="Content('Charges')">Charges</button></a>
+					  <a href="#"><button class="Buttons Inside" type="button" id="MainMenu_BAM" onclick="Content('AboutMe')">About Me</button></a>
+					</div>
+				</div>
+				<img id="Logo_Right_Head" src="Assets/Logo.png" alt="Logo"></img>
 			</section>
-			<img id="Logo_Right_Head" src="Main_Page/Logo.png" alt="Logo"></img>		
+			
+			<!--
+			<button class="Buttons Inside" type="button" id="MainMenu_BOT" onclick="Content('Tutor')">Other Tutors</button>
+			<button class="Buttons Inside" type="button" id="MainMenu_BHE" onclick="Content('HomeEd')">Home Ed Courses</button>
+			<button class="Buttons Inside" type="button" id="MainMenu_BTP" onclick="Content('Testimonal')">Testimonials</button>
+			<button class="Buttons Inside" type="button" id="MainMenu_BWT" onclick="Content('Why')">Why Tutoring</button>
+			<button class="Buttons Inside" type="button" id="MainMenu_BCT" onclick="Content('Contact')">Contact</button>
+			<button class="Buttons Inside" type="button" id="MainMenu_BCP" onclick="Content('Charges')">Charges</button>
+			<button class="Buttons Inside" type="button" id="MainMenu_BAM" onclick="Content('AboutMe')">About Me</button>
+			-->
 		</header>
-
-		<canvas id="Canvas"></canvas>
-
+	<section id="CanvasHolder">
+		<canvas id="Canvas" width="500" height="200"></canvas>
+	</section>
 		<main onload="Content">
 			<h1 id="Title_Main"></h1>
 			<p id ="DisplayText"></p>
 		</main>
-	</body>	
+	</body>
 </html>

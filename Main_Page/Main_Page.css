@@ -29,7 +29,7 @@ header
 }
 
 
-#Logo_Left_Head, #Logo_Right_Head, #Title_Head, .Buttons
+#Logo_Left_Head, #Logo_Right_Head, #Title_Head, .Buttons, #DropDownButtons
 {
     display: inline-block;
 }
@@ -43,7 +43,7 @@ header
     min-height: 25px;
 }
 
-.Buttons
+.Buttons, .dropbtn
 {
     border: 1px solid black;
     border-radius: 5px;
@@ -59,37 +59,50 @@ header
     background-color: grey;
     color: white;
 }                                                                                                                         
-
-
-.Drop {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
 }
 
-
-.DropDown {
-  position: relative;
-  display: inline-block;
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    z-index: 1;
 }
+  
 
-
-.DropDown_Content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  color: black;
-  padding: 12px 16px;
-  display: block;
+/* Links inside the dropdown */
+.dropdown-content a 
+{
+    color: black;
+    display: block;
 }
+  
 
-.DropDown_Content:hover {background-color: #ddd;}
+#Arrow
+{
+    max-width: 10px;
+    max-height: 10px;
+    padding-top: 4px;
+}
+  
 
-.DropDown:hover .DropDown_Content {display: block;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content 
+{
+    display: block;
+}
+  
 
-.DropDown:hover .Drop {background-color: #3e8e41;}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn 
+{
+      background-color: grey;
+      color: white;
+}
