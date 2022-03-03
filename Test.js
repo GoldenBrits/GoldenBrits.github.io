@@ -1,10 +1,10 @@
 window.addEventListener('resize', function(event)
 {
-  let CanvasHolder = document.getElementById("CanvasHolder");
+  <!--let CanvasHolder = document.getElementById("CanvasHolder");
   var Canvas = document.getElementById("Canvas");
-  Console.log(Canvas, CanvasHolder);
-  var Width = Canvas.clientWidth;
-  var Height = Canvas.clientHeight;
+  Console.log(Canvas, CanvasHolder);-->
+  var Width = window.innerWidth;
+  var Height = window.innerHeight;
 
   Canvas.setAttribute('width', Width);
   Canvas.setAttribute('height', Height);
@@ -26,8 +26,8 @@ var y = 100; // vertical offset
 
 // Main program
 
-var CanvasYSize = 
-var CanvasXSize = 
+var CanvasYSize = window.innerHeight;
+var CanvasXSize = window.innerWidth;
 var dx = 0.75;
 var imgW;
 var imgH;
