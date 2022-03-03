@@ -1,8 +1,8 @@
 window.addEventListener('resize', function(event)
 {
-  <!--let CanvasHolder = document.getElementById("CanvasHolder");
+  /*let CanvasHolder = document.getElementById("CanvasHolder");
   var Canvas = document.getElementById("Canvas");
-  Console.log(Canvas, CanvasHolder);-->
+  Console.log(Canvas, CanvasHolder);*/
   var Width = window.innerWidth;
   var Height = window.innerHeight;
 
