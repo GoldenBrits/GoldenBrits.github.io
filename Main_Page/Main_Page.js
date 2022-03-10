@@ -19,7 +19,7 @@ var AboutMe = "I am a private maths tutor providing one-to-one tuition and suppo
 function OnLoad()
 {
     Content();
-    Background();
+    setInterval(Colour, 1000);
 }
 
 function Content(Requested)
@@ -43,6 +43,29 @@ switch(Requested)
   
 }
 }
+
+
+
+function Colour()
+{
+  const Time = new Date();
+
+  var mins = Time.getMinutes();
+  var hrs = Time.getHours();
+  var CurrentDate = Time.getDate();
+  var month = Time.getMonth();
+  
+  var Width = Canvas.width;
+  var Height = Canvas.height;
+  
+  
+  var Hue = 6*mins;
+  var Brightness = 40*Math.pow(Math.sin(hrs*3+mins), 2)+30;
+  
+  document.documentElement.style.setProperty("--Hue", Hue);
+  document.documentElement.style.setProperty("--Brightness", Brightness);
+}
+
 
 /*
 //Credit to https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations for the code
