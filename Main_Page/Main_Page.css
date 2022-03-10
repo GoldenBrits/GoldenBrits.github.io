@@ -106,3 +106,27 @@ header
       background-color: grey;
       color: white;
 }
+
+
+#BackgroundImg
+{
+    background-image: url('../Assest/MainMenu_Background.png');
+}
+
+
+#Background
+{
+    --Hue: 0;
+    --Brightness: 35;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--Hue, 0), 100%, var(--Brightness, 50));
+    animation: Background linear infinite;
+}
+
+
+@keyframes Background
+{
+    0% {left:0vw}
+    100% {left:100vw}
+}
