@@ -197,8 +197,8 @@ function SignUp_Attempt()
 			document.getElementById('SignUp_Submit_Button').style.visibility = "collapse";
 		    	document.getElementById('alertDia').style.visibility = "visible";#
 		    	*/
-           		fetch("SignUp.php");
-			response.bodyUsed();
+           		fetch("SignUp.php")
+			.then(function response(){console.log(response.ok);});
 			
 		}
 	}
