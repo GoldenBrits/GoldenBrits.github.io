@@ -3,6 +3,8 @@
 //Temporary cookie storage = session (variables)
 session_start();
 
+echo "Test";//See if the php File is running
+
 $databasestring = mysqli_connect('localhost', 'root', '', 'mathstutordevon');
 
 $username =  mysql_real_escape_string($_POST['SignUp_Username']); //injection proof
