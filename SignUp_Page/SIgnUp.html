@@ -1,65 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="stylesheet" type ="text/css" href="SignUp.css">
-		<script src="SignUp.js"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-		<link href="SignUp.php">
-		<link rel="icon" type="image/png" size="32x32" href="../Assets/Logo.png">
-		<title>SignUp Page</title>
-	</head>
 
-	<body>
-		<header>
-			<img src="../Assets/Logo.png" id="Logo_Left" alt="Logo">
-			<h1 id="Title_Head">SignUp Page</h1>
+    <head>
+        <link rel="stylesheet" type ="text/css" href="SignUp.css">
+        <script src="SignUp.js"></script>
+        <link href=https://fonts.googleapis.com/css2?family=Ubuntu&display=swap rel="stylesheet">
+        <link href="SignUp.php">
+        <link rel="icon" type="image/png" size="32x32" href="../Assets/Logo.png">
+        <title>SignUp Page</title>
+
+    </head>
+
+    <body>
+
+        <header>
+            <img src="../Assets/Logo.png" id="Logo_Left" alt="Logo">
+            <h1 id="Title_Head">SignUp Page</h1>
             <button type="button" id="SignUp_BMP" onclick="window.location.href='../index.html'">To Main Page</button>
             <button type="button" id="SignUp_BLP" onclick="window.location.href='../Login_Page/Login_Page.html'">To Login Page</button>
-			<img src="../Assets/Logo.png" id="Logo_Right" alt="Logo">
-		</header>
-		<main>
-			<h1>SignUp Information</h1>
-			<section class="SignUpMenu">
-				<form action="SignUp.php" method="POST">
-					<section class="UserName">
-						<label for="SignUp_Username">Username:</label>
-						<input type="text" onfocus="return TextKeepUN('SignUp_Username')" onfocusout="return TextBackUN('SignUp_Username')" id="SignUp_Username" name="SignUp_Username" value="Example John Smith">
-					</section>
-					<br>
+            <img src="../Assets/Logo.png" id="Logo_Right" alt="Logo">
+        </header>
 
-					<section class="Email">
-						<label for="SignUp_Email">Email:</label>
-						<input type="text" onfocus="return TextKeepEM('SignUp_Email')" onfocusout="return TextBackEM('SignUp_Email')" id="SignUp_Email" name="SignUp_Email" value="Example JohnSmith@mail.com">
-					</section>
-
-					<br>
-
-					<section class="Phone">
-						<label for="SignUp_Phone">Phone:</label>
-						<input type="text" onfocus="return TextKeepPN('SignUp_Phone')" onfocusout="return TextBackPN('SignUp_Phone')" id="SignUp_Phone" name="SignUp_Phone" value="Example 07794522365">
-					</section>
-					<br>
-
-					<section class="Password">
-						<label for="SignUp_Password">Password:</label>
-						<input type="text" onfocus="return TextKeepPW('SignUp_Password')" onfocusout="return TextBackPW('SignUp_Password')" id="SignUp_Password" name="SignUp_Password" value="Example 6fI012/@;">
-						<input type="checkbox" id="Checkbox_PW" value="Show" onclick="Checkbox = !Checkbox; TextKeepPW('SignUp_Password')">
-						<div>
-							<h5 id="Password_Info">Please Include one or more of the following:<br>capital letters<br>Lowercase Letters<br>Numbers<br>Special Characters</h5>
-						</div>
-					</section>
-					<section class="SignUp_Submit">
-						<button type="button" id="SignUp_Submit_Button" onclick="return SignUp_Attempt()">Submit</button>
-
-						<div id="alertDia" style="visibility: collapse;">
-							<p><strong>Accepted:</strong> Your account details are correct!</p>
-						</div>
-
-						<input type="submit" id="SignUpButton" value="SignUp!" style="visibility: collapse;">
-					</section>
-					
-				</form>
-			</section>
-		</main>		
-	</body>
-</html>
+        <main>
+            <h1>SignUp Information</h1>
+            <section class="SignUpMenu">
+                <form action="SignUp.php" onsubmit="return SignUp_Attempt()" method="POST">
+                    <section class="UserName">
+                        <label for="SignUp_Username">Username:</label>
+                        <input type="text" onfocus="return TextKeepUN('SignUp_Username')" onfocusout="return TextBackUN('SignUp_Username')" id="SignUp_Username" name="SignUp_Username" value="Example John Smith">
+                    </section>
+                    <br>
+                    <section class="Email">
+                        <label for="SignUp_Email">Email:</label>
+                        <input type="text" onfocus="return TextKeepEM('SignUp_Email')" onfocusout="return TextBackEM('SignUp_Email')" id="SignUp_Email" name="SignUp_Email" value="Example JohnSmith@mail.com">
+                    </section>
+                    <br>
+                    <section class="Phone">
+                        <label for="SignUp_Phone">Phone:</label>
+                        <input type="text" onfocus="return TextKeepPN('SignUp_Phone')" onfocusout="return TextBackPN('SignUp_Phone')" id="SignUp_Phone" name="SignUp_Phone" value="Example 07794522365">
+                    </section>
+                    <br>
+                    <section class="Password">
+                        <label for="SignUp_Password">Password:</label>
+                        <input type="text" onfocus="return TextKeepPW('SignUp_Password')" onfocusout="return TextBackPW('SignUp_Password')" id="SignUp_Password" name="SignUp_Password" value="Example 6fI012/@;">
+                        <input type="checkbox" id="Checkbox_PW" value="Show" onclick="Checkbox = !Checkbox; TextKeepPW('SignUp_Password')">
+                        <div>
+                            <h5 id="Password_Info">Please Include one or more of the following:<br>capital letters<br>Lowercase Letters<br>Numbers<br>Special Characters</h5>
+                        </div>
+                    </section>
+                    <section class="SignUp_Submit">
+                        <input type="submit" id="SignUp_Submit_Button" value="Submit">
+                        <div id="alertDia" style="visibility: collapse;">
+                            <p><strong>Accepted:</strong> Your account details are correct!</p>
+                        </div>
+                    </section>

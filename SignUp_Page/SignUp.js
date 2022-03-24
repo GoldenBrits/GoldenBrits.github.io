@@ -188,18 +188,11 @@ function SignUp_Attempt()
 		if (ErrorG == true)
 		{
 			document.getElementById('Password_Info').innerHTML = ErrorString;
+			return false;
 		}
 		else 
 		{
-		    	//check database and stuff
-		    	/*
-			document.getElementById('signupButton').style.visibility = "visible";
-			document.getElementById('SignUp_Submit_Button').style.visibility = "collapse";
-		    	document.getElementById('alertDia').style.visibility = "visible";#
-		    	*/
-           		fetch("SignUp.php")
-			.then(function response(){console.log(response.ok);});
-			
+			return true;		
 		}
 	}
 	else
