@@ -191,13 +191,15 @@ function SignUp_Attempt()
 		}
 		else 
 		{
-            //check database and stuff
-            /*
+		    	//check database and stuff
+		    	/*
 			document.getElementById('signupButton').style.visibility = "visible";
 			document.getElementById('SignUp_Submit_Button').style.visibility = "collapse";
-            document.getElementById('alertDia').style.visibility = "visible";#
-            */
-           fetch("SignUp.php");
+		    	document.getElementById('alertDia').style.visibility = "visible";#
+		    	*/
+           		fetch("SignUp.php");
+			response.bodyUsed();
+			
 		}
 	}
 	else
