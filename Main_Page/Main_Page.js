@@ -55,10 +55,6 @@ function Colour()
   var CurrentDate = Time.getDate();
   var month = Time.getMonth();
   
-  var Width = Canvas.width;
-  var Height = Canvas.height;
-  
-  
   var Hue = 6*mins;
   var Brightness = 40*Math.pow(Math.sin(hrs*3+mins), 2)+30;
   
