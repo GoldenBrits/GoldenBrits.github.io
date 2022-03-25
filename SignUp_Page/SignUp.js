@@ -200,16 +200,19 @@ function SignUp_Attempt()
 		if (ErrorU == true && ErrorP == true)
 		{
 			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error with Password<br>Error found Default value or Empty";
+			return false;
 		}
 
 		else if (ErrorP == true)
 		{
 			document.getElementById('Password_Info').innerHTML = "Error with Password<br>Error found Default value or Empty";
+			return false;
 		}
 
 		else
 		{
 			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error found Default value or Empty";
+			return false;
 		}
 	}
 }
