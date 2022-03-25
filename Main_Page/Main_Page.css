@@ -133,6 +133,6 @@ header
 
 @keyframes Background
 {
-    0% {left:0vw}
-    100% {left:100vw}
+    from{0% {left:0%}}
+    to{100% {left:100%}}
 }
