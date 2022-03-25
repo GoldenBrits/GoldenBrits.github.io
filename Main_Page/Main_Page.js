@@ -1,3 +1,4 @@
+/*
 window.addEventListener('resize', function(event)
 {
   let Canvas = document.querySelector("#CanvasHolder");
@@ -10,7 +11,7 @@ window.addEventListener('resize', function(event)
   console.log(Width, Height);
 }
 );
-
+*/
 
 var MainPage = "Mathematics is vital in our modern life, it surrounds us everywhere and is the key subject that opens many doors.  As our world becomes more and more technology based so the need for mathematical skills becomes more and more important.<br><br>You may be a student struggling with exams and day to day maths lessons, or an adult trying to cope with numeracy in the workplace, I am here to assist and help.<br><br>I am an enthusiastic and experienced maths tutor, tutoring all age groups from primary school up to GCSE standard.  With clear and concise explanations I aim to make maths more understandable and enjoyable.";
 
