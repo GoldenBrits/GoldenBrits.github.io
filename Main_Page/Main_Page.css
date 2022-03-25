@@ -8,6 +8,7 @@
 
 main
 {
+    z-index: 2;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
@@ -116,7 +117,7 @@ header
 
 #Background
 {
-    position: absolute;
+    z-index: 100;
     --Hue: 0;
     --Brightness: 35;
     width: 100vw;
