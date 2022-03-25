@@ -116,6 +116,7 @@ header
 
 #Background
 {
+    position: absolute;
     --Hue: 0;
     --Brightness: 35;
     width: 100vw;
