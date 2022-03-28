@@ -114,6 +114,8 @@ header
     background-image: url('../Assets/MainPage_Background.png');
     position: absolute;
     z-index: -1;
+    animation: Background linear infinite;
+    animation-duration: 60s;
 }
 
 
@@ -126,7 +128,7 @@ header
     height: 100vh;
     background-color: hsl(var(--Hue, 0), 100%, var(--Brightness, 50));
     animation: Background linear infinite;
-    animation-duration: 10s;
+    animation-duration: 60s;
 }
 
 
