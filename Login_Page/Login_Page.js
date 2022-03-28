@@ -1,10 +1,5 @@
 var Checkbox = false;
 
-var ErrorG = false;
-var ErrorU = false;
-var ErrorP = false;
-
-
 function TextBackUN(Name)
 {
 	var Output = document.getElementById(Name);
@@ -91,30 +86,26 @@ function Login_Attempt()
 		var Num = ContentPW.match(/[\d]/);
 		var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);
 		
-		var ErrorString = "Error(s) found:<br>";
+		var ErrorString = "Login Details are Incorrect";
 
 		if (Cap == null)
 		{			
-			ErrorG = true;
-			ErrorString += "No Capital Letter<br>"; 
+			ErrorG = true; 
 		}
 
 		if (Lower == null)
 		{			
 			ErrorG = true;
-			ErrorString += "No Lower Case Letter<br>";
 		}
 
 		if (Num == null)
 		{
 			ErrorG = true;
-			ErrorString += "No Number<br>";
 		}
 
 		if (Spec == null)
 		{
 			ErrorG = true;
-			ErrorString += "No Special Character";
 		}
 
 		console.log(ErrorG);
@@ -130,19 +121,6 @@ function Login_Attempt()
 	}
 	else
 	{
-		if (ErrorU == true && ErrorP == true)
-		{
-			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error with Password<br>Error found Default value or Empty";
-		}
-
-		else if (ErrorP == true)
-		{
-			document.getElementById('Password_Info').innerHTML = "Error with Password<br>Error found Default value or Empty";
-		}
-
-		else
-		{
-			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error found Default value or Empty";
-		}
+		document.getElementById('Password_Info').innerHTML = ErrorString;
 	}
 }
