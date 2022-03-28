@@ -109,6 +109,21 @@ header
 }
 
 
+@keyframes BackgroundImg
+{
+    from{0% {left:0%}}
+    to{100% {left:100%}}
+}
+
+
+@keyframes Background
+{
+    from{0% {left:0%}}
+    to{100% {left:100%}}
+}
+
+
+
 #BackgroundImg
 {
     background-image: url('../Assets/MainPage_Background.png');
@@ -129,18 +144,4 @@ header
     background-color: hsl(var(--Hue, 0), 100%, var(--Brightness, 50));
     animation: Background linear infinite;
     animation-duration: 60s;
-}
-
-
-@keyframes BackgroundImg
-{
-    from{0% {left:0%}}
-    to{100% {left:100%}}
-}
-
-
-@keyframes Background
-{
-    from{0% {left:0%}}
-    to{100% {left:100%}}
 }
