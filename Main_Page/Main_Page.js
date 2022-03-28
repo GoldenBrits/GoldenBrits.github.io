@@ -59,6 +59,8 @@ function Colour()
   var Hue = 6*mins;
   var Brightness = 40*Math.pow(Math.sin(hrs*3+mins), 2)+30;
   
+  console.log(Hue, Brightness);
+  
   document.documentElement.style.setProperty("--Hue", Hue);
   document.documentElement.style.setProperty("--Brightness", Brightness);
 }
