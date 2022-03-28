@@ -129,6 +129,13 @@ header
 }
 
 
+@keyframes BackgroundImg
+{
+    from{0% {left:0%}}
+    to{100% {left:100%}}
+}
+
+
 @keyframes Background
 {
     from{0% {left:0%}}
