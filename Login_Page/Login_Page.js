@@ -63,7 +63,7 @@ function TextKeepPW(Name)
 function Login_Attempt()
 {
 	var ContentUN = document.getElementById('Login_Username').value;
-	var ContentPW = document.getElementById('Login_Password').value;
+    var ContentPW = document.getElementById('Login_Password').value;
 	
 	ErrorG = false;
 	ErrorU = false;
@@ -78,19 +78,18 @@ function Login_Attempt()
 	{
 		ErrorP = true;
 	}
-	
 	if (ErrorU == false && ErrorP == false)
 	{
-		var Cap = ContentPW.match(/[A-Z]/);
-		var Lower = ContentPW.match(/[a-z]/);
-		var Num = ContentPW.match(/[\d]/);
-		var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);
-		
-		var ErrorString = "Login Details are Incorrect";
+        //Regular Experssions that check for certain paramaters
+        var Cap = ContentPW.match(/[A-Z]/);//Checks for Capital Letters in Password
+		var Lower = ContentPW.match(/[a-z]/);//Checks for Lower Case Letters in Password
+		var Num = ContentPW.match(/[\d]/);//Checks for a Number in Password
+        var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);//Checks for a Special Character in Password
+        
 
 		if (Cap == null)
 		{			
-			ErrorG = true; 
+			ErrorG = true;
 		}
 
 		if (Lower == null)
@@ -108,19 +107,48 @@ function Login_Attempt()
 			ErrorG = true;
 		}
 
-		console.log(ErrorG);
-		
+        if(ContentEM == null || ContentEM == 'Example JohnSmith@mail.com')
+        {
+            ErrorG = true;
+        }
+        else if(Email == null)
+        {
+            ErrorG = true;
+        }
+        
+        if(PhoneL != 11 || Phone == null || isNaN(ContentPN) == true)
+        {
+            ErrorG = true;
+        }
+
+
 		if (ErrorG == true)
 		{
-			document.getElementById('Password_Info').innerHTML = ErrorString;
+			return false;
 		}
 		else 
 		{
-			//check database and stuff
+			return true;		
 		}
 	}
 	else
 	{
-		document.getElementById('Password_Info').innerHTML = ErrorString;
+		if (ErrorU == true && ErrorP == true)
+		{
+			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error with Password<br>Error found Default value or Empty";
+			return false;
+		}
+
+		else if (ErrorP == true)
+		{
+			document.getElementById('Password_Info').innerHTML = "Error with Password<br>Error found Default value or Empty";
+			return false;
+		}
+
+		else
+		{
+			document.getElementById('Password_Info').innerHTML = "Error with Username<br>Error found Default value or Empty";
+			return false;
+		}
 	}
 }
