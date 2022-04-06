@@ -4,7 +4,7 @@ var ErrorG = false;
 var ErrorU = false;
 var ErrorP = false;
 
-
+//Function that resets the value of the Text box if it is empty
 function TextBackUN(Name)
 {
 	var Output = document.getElementById(Name);
@@ -15,7 +15,7 @@ function TextBackUN(Name)
 	    }
 }
 
-
+//Function that Removes the Data in the text box if it contains nothing or the Example text.
 function TextKeepUN(Name)
 {
 	var Output = document.getElementById(Name);
@@ -26,7 +26,7 @@ function TextKeepUN(Name)
 	}
 }
 
-
+//Function that reinputs the example text if the user hasn't entered anything or the Example Text is still present (incase of glitches or the user mesing with the system), it also changes the text box type to text if it reinputs the Example text so the user can read it.
 function TextBackPW(Name)
 {   
     var Output = document.getElementById(Name);
@@ -42,7 +42,7 @@ function TextBackPW(Name)
 	}
 }
 
-
+//Function that Deletes the text in the text box if the user clicks on it and the contained data is not User Inputted data, it also sets the Password type to text meaning it is able to be read
 function TextKeepPW(Name)
 {    
     var Output = document.getElementById(Name);
@@ -109,6 +109,7 @@ function TextKeepPN(Name)
 }
 
 
+//The function that is called when the Submit Button is pressed, it's purpose is to check the format of the entered Data to see if it is valid
 function SignUp_Attempt()
 {
 	var ContentUN = document.getElementById('SignUp_Username').value;
@@ -120,6 +121,8 @@ function SignUp_Attempt()
 	ErrorU = false;
 	ErrorP = false;
 
+
+	//checks for the Username and Password to be empty or the default Value
 	if (ContentUN == "Example John Smith" || ContentUN == "")
 	{
 		ErrorU = true;
@@ -129,6 +132,8 @@ function SignUp_Attempt()
 	{
 		ErrorP = true;
 	}
+
+	//Checks if the Before mentioned Errors are true or not
 	if (ErrorU == false && ErrorP == false)
 	{
         //Regular Experssions that check for certain paramaters
@@ -136,29 +141,30 @@ function SignUp_Attempt()
 		var Lower = ContentPW.match(/[a-z]/);//Checks for Lower Case Letters in Password
 		var Num = ContentPW.match(/[\d]/);//Checks for a Number in Password
         var Spec = ContentPW.match(/[`¬!"£$%^&*(_)+=<>,.?/:;@'{[}#~}-]/);//Checks for a Special Character in Password
-        var Email = ContentEM.match(/[@]/);
-        var Phone = ContentPN.match(/[07]/);
-        var PhoneL = ContentPN.length;
+        var Email = ContentEM.match(/[@]/);//checks that the email contains an @
+        var Phone = ContentPN.match(/[07]/);//checks the phone number has a 07 in it
+        var PhoneL = ContentPN.length;//gets the length of the Phone Number
         
-		
+		//Error STring for the Error Message that is displayed to the user
 		var ErrorString = "Error(s) found<br>";
 
+		//The various if statments checking for errors such as no Capital letter in Password
 		if (Cap == null)
 		{			
 			ErrorG = true;
-			ErrorString += "No Capital Letter in Psssword<br>"; 
+			ErrorString += "No Capital Letter in Password<br>"; 
 		}
 
 		if (Lower == null)
 		{			
 			ErrorG = true;
-			ErrorString += "No Lower Case Letter in Psssword<br>";
+			ErrorString += "No Lower Case Letter in Password<br>";
 		}
 
 		if (Num == null)
 		{
 			ErrorG = true;
-			ErrorString += "No Number in Psssword<br>";
+			ErrorString += "No Number in Password<br>";
 		}
 
 		if (Spec == null)
@@ -184,7 +190,7 @@ function SignUp_Attempt()
             ErrorString+="Not Valid Phone Number Format<br>"
         }
 
-
+		//the final if statment that checks if there is an error or not, if there is an error then false is returned and error string is outputted the the error box
 		if (ErrorG == true)
 		{
 			document.getElementById('Password_Info').innerHTML = ErrorString;
@@ -195,6 +201,8 @@ function SignUp_Attempt()
 			return true;		
 		}
 	}
+
+	//The else statment meaning that there is an error with the default value or empty
 	else
 	{
 		if (ErrorU == true && ErrorP == true)
